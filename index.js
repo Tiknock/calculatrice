@@ -1,14 +1,13 @@
 const buttons = document.querySelectorAll(".btn");
 const result = document.getElementById("result");
 
-document.addEventListener("keypress", (e) => {
-    console.log(e.key);
-    if (e.key != "Enter" && e.key != "c") {
+document.addEventListener("keydown", (e) => {
+    if (e.key != "Enter" && e.key != "Backspace") {
         result.textContent += e.key;
-        } else if (e.key = "c" && e.key != "Enter") {
+        } else if (e.key = "Backspace" && e.key != "Enter") {
         result.textContent = '';
         } else {
-    result.textContent = eval(result.textContent)
+        result.textContent = eval(result.textContent)
         }
 })
 
